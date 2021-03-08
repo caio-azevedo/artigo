@@ -1,0 +1,101 @@
+CNES - Recursos Físicos - Hospitalar - Leitos de internação - Brasil
+Quantidade existente por Município
+Unidade da Federação: Rio de Janeiro
+Período:Dez/2010
+"Município";"Quantidade_existente"
+"330010 Angra dos Reis";305
+"330015 Aperibé";35
+"330020 Araruama";259
+"330022 Areal";46
+"330023 Armação dos Búzios";30
+"330025 Arraial do Cabo";75
+"330030 Barra do Piraí";333
+"330040 Barra Mansa";331
+"330045 Belford Roxo";436
+"330050 Bom Jardim";61
+"330060 Bom Jesus do Itabapoana";431
+"330070 Cabo Frio";535
+"330080 Cachoeiras de Macacu";103
+"330090 Cambuci";74
+"330100 Campos dos Goytacazes";1747
+"330110 Cantagalo";62
+"330120 Carmo";39
+"330130 Casimiro de Abreu";97
+"330140 Conceição de Macabu";71
+"330150 Cordeiro";64
+"330160 Duas Barras";16
+"330170 Duque de Caxias";1372
+"330180 Engenheiro Paulo de Frontin";50
+"330185 Guapimirim";67
+"330190 Itaboraí";566
+"330200 Itaguaí";127
+"330205 Italva";126
+"330210 Itaocara";81
+"330220 Itaperuna";619
+"330225 Itatiaia";94
+"330227 Japeri";245
+"330230 Laje do Muriaé";52
+"330240 Macaé";438
+"330250 Magé";592
+"330260 Mangaratiba";62
+"330270 Maricá";106
+"330280 Mendes";82
+"330285 Mesquita";71
+"330290 Miguel Pereira";99
+"330300 Miracema";73
+"330310 Natividade";49
+"330320 Nilópolis";437
+"330330 Niterói";2671
+"330340 Nova Friburgo";632
+"330350 Nova Iguaçu";961
+"330360 Paracambi";760
+"330370 Paraíba do Sul";119
+"330380 Paraty";34
+"330390 Petrópolis";1559
+"330395 Pinheiral";40
+"330400 Piraí";49
+"330410 Porciúncula";56
+"330411 Porto Real";44
+"330412 Quatis";241
+"330414 Queimados";300
+"330415 Quissamã";49
+"330420 Resende";272
+"330430 Rio Bonito";556
+"330440 Rio Claro";33
+"330450 Rio das Flores";15
+"330452 Rio das Ostras";92
+"330455 Rio de Janeiro";23015
+"330460 Santa Maria Madalena";79
+"330470 Santo Antônio de Pádua";175
+"330480 São Fidélis";113
+"330475 São Francisco de Itabapoana";52
+"330490 São Gonçalo";2301
+"330500 São João da Barra";42
+"330510 São João de Meriti";1170
+"330515 São José do Vale do Rio Preto";56
+"330520 São Pedro da Aldeia";79
+"330530 São Sebastião do Alto";48
+"330550 Saquarema";60
+"330555 Seropédica";49
+"330560 Silva Jardim";17
+"330570 Sumidouro";36
+"330575 Tanguá";212
+"330580 Teresópolis";357
+"330590 Trajano de Moraes";38
+"330600 Três Rios";300
+"330610 Valença";317
+"330615 Varre-Sai";39
+"330620 Vassouras";504
+"330630 Volta Redonda";810
+"Total";48910
+ A partir da competência de Janeiro 2010 os dados referentes
+ a leitos Complementares foram retirados da consulta referente
+ a leitos de Internação, passando a constituir uma consulta específica conforme descrito na Nota Técnica.
+ Fonte: Ministério da Saúde - Cadastro Nacional dos Estabelecimentos de Saúde do Brasil - CNES
+ Nota:
+ A partir do processamento de junho de 2012, houve mudança na classificação da natureza e esfera dos estabelecimentos. Com isso, temos que:
+ 
+ Até maio de 2012 estas informações estão disponíveis como "Natureza" e "Esfera Administrativa".
+ De junho de 2012 a outubro de 2015, estão disponíveis tanto como "Natureza" e "Esfera Administrativa", como "Natureza Jurídica" e "Esfera Jurídica".
+ A partir de novembro de 2015, estão disponíveis como "Natureza Jurídica" e "Esfera Jurídica".
+ 
