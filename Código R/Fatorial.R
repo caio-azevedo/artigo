@@ -14,13 +14,13 @@ rm(list=ls())
 
 #Diretório
 
-setwd("c:/Users/CAIO AZEVEDO/Documents/Documentos Caio/Github/Monografia")
+setwd("c:/Users/CAIO AZEVEDO/Documents/Documentos Caio/Github/artigo")
 
 # Importando os dados disponíveis no GitHub
 
-#site<-"https://raw.githubusercontent.com/caio-azevedo/Monografia/master/data/base.csv"
+site<-"https://raw.githubusercontent.com/caio-azevedo/artigo/main/data/base.csv"
 
-dados<- read.table("data/base.csv", header=T, sep=";")
+dados<- read.table(site, header=T, sep=";")
 
 
 # Preparação dos dados

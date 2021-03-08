@@ -14,7 +14,7 @@ rm(list=ls())
 
 #Diretório
 
-setwd("c:/Users/CAIO AZEVEDO/Documents/Documentos Caio/Github/Monografia")
+setwd("c:/Users/CAIO AZEVEDO/Documents/Documentos Caio/Github/artigo")
 
 # Preparação dos dados
 
@@ -457,16 +457,12 @@ dados<-full_join(dados, bolsa_fam, c("mun"))
 
 rm(bolsa_fam)
 
+# Trocando NA por zero
 
 dados<- replace(dados, list = is.na(dados), values = 0)
 
 #Exportando----
 write.table(dados,file='data/base.csv',sep=';', row.names = F)
-write.table(dados,file='data/base_excel.xlsx',sep=';', row.names = F)
-write_spss(dados, "meu_banco.sav")
-
-devtools::install_github("strengejacke/strengejacke")
+write_spss(dados, "base.sav")
 
 
-
-write_

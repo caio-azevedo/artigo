@@ -2,7 +2,7 @@
 
 Repositório dos scripts utilizados na monografia apresentada em 2016 no curso de Ciências Econômicas do Departamento de Ciências Econômicas e Exatas da Universidade Federal Rural do Rio de Janeiro - Instituto Três Rios como requisito parcial para a obtenção do título de Bacharel em Economia.
 
-# Informações da dissertação
+# Informações
 
 ## O Potencial de Desenvolvimento dos Munícipios do Estado do Rio de Janeiro através de Análise Multivariada
 
