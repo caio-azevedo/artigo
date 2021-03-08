@@ -32,7 +32,7 @@ df<-as.matrix(dados[,2:14])
 row.names(df)<-dados$Municipio
 
 
-df<-scale(df)
+
 
 # Matriz de correlação
 

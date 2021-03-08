@@ -460,6 +460,19 @@ rm(bolsa_fam)
 # Trocando NA por zero
 
 dados<- replace(dados, list = is.na(dados), values = 0)
+dados<-dados %>% 
+  mutate("x5"=as.numeric(x5))
+
+# Normalizando as variáveis
+mun<-dados$mun
+dados<-dados %>% 
+  select(-mun)
+
+dados<-scale(dados)
+dados<-data.frame(dados)
+dados<-cbind.data.frame(mun, dados)
+
+rm(mun)
 
 #Exportando----
 write.table(dados,file='data/base.csv',sep=';', row.names = F)
