@@ -3,6 +3,7 @@
 library(dplyr)
 library(readxl)
 library(stringr)
+library(sjlabelled)
 
 
 
@@ -181,6 +182,23 @@ dados<-full_join(dados, x, c("mun"))
 
 rm(x)
 
+
+# Rendimento nominal mensal----
+rend<- read_xlsx("data/tabela3548.xlsx", 
+                col_names = c("mun","tot1", "tot2", "tot3", "x8"), 
+                sheet = "Valor do rendimento nominal ...",
+                skip=7, n_max = 92)
+
+rend<-rend %>% 
+  select(mun,x8)
+
+# Juntando a base existente
+dados<-full_join(dados, rend, c("mun"))
+
+rm(rend)
+
+
+
 # Operações de crédito----
 
 banco<- read.csv("data/201012_ESTBAN.csv",sep = ";", header = T, skip=2)
@@ -283,6 +301,34 @@ dados<-full_join(dados, dom, c("mun"))
 
 rm(dom)
 
+
+#IDHM----
+
+idhm<- read_xlsx("data/atlas2013_dadosbrutos_pt.xlsx", 
+                 sheet = "MUN 91-00-10")
+
+idhm<-idhm %>% 
+  filter(ANO==2010,UF==33) %>% 
+  select(Município,IDHM) %>% 
+  rename("x12"=IDHM)
+
+MUN<-paste(idhm$Município, "(RJ)", sep=" ")
+idhm<-cbind(MUN,idhm)
+idhm<-idhm[,-2]
+
+rm(MUN)
+
+# Juntando a base existente ----
+
+MUN<-toupper(dados$mun)
+dados<-cbind(MUN,dados)
+
+dados<-full_join(dados, idhm, c("MUN"))
+
+dados<-dados %>% 
+  select(-MUN)
+
+rm(idhm)
 
 #PIB per capita----
 
@@ -412,6 +458,15 @@ dados<-full_join(dados, bolsa_fam, c("mun"))
 rm(bolsa_fam)
 
 
+dados<- replace(dados, list = is.na(dados), values = 0)
+
+#Exportando----
+write.table(dados,file='data/base.csv',sep=';', row.names = F)
+write.table(dados,file='data/base_excel.xlsx',sep=';', row.names = F)
+write_spss(dados, "meu_banco.sav")
+
+devtools::install_github("strengejacke/strengejacke")
 
 
 
+write_

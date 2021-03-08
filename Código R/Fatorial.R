@@ -18,15 +18,17 @@ setwd("c:/Users/CAIO AZEVEDO/Documents/Documentos Caio/Github/Monografia")
 
 # Importando os dados disponíveis no GitHub
 
-site<-"https://raw.githubusercontent.com/caio-azevedo/Monografia/master/data/base.csv"
-dados<- read.table(site, header=T, sep=";")
+#site<-"https://raw.githubusercontent.com/caio-azevedo/Monografia/master/data/base.csv"
+
+dados<- read.table("data/base.csv", header=T, sep=";")
+
 
 # Preparação dos dados
 
 dados<-dados %>% 
-  select(Municipio,x1, x2, x5, x7, x8, x9, x13, x15, x16, x17, x18)
+  select(mun,x1, x2,x4, x5, x7, x8, x9,x12, x13, x15, x16, x17, x18)
 
-df<-as.matrix(dados[,2:12])
+df<-as.matrix(dados[,2:14])
 row.names(df)<-dados$Municipio
 
 
@@ -61,7 +63,7 @@ tab1[1]<-"KMO"
 tab2<-summary(princomp(df,cor=TRUE))
 
 tab2<-data.frame(tab2[["sdev"]], 
-                row.names = c(1:11))
+                row.names = c(1:13))
 colnames(tab2)<-c("Desvio Padrão")
 
 tab2<-tab2 %>% 
@@ -139,3 +141,7 @@ print(xtable(tab, caption = "Comunalidades",
       caption.placement = "top",
       include.rownames = FALSE,
       format.args = list(big.mark = ".", decimal.mark = ","))
+
+
+
+
